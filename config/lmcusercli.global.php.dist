@@ -1,0 +1,26 @@
+<?php
+/**
+ * LmcUserCli Configuration
+ *
+ * If you have a ./config/autoload/ directory set up for your project, you can
+ * drop this config file in it and change the values as you wish.
+ */
+return [
+    'lmcuser' => [
+        /**
+         * User table columns
+         *
+         * Change the values to the matching table columns if you have custom
+         * column names.
+         * Example: 'display_name' => 'RealNameColumn'
+         */
+        //'table_columns' => [
+        //    'display_name' => 'display_name',
+        //    'email' => 'email',
+        //    'user_id' => 'user_id',
+        //    'username' => 'username',
+        //    'password' => 'password',
+        //    'state' => 'state',
+        //],
+    ],
+];
