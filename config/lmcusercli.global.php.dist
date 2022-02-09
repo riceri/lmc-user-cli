@@ -22,5 +22,12 @@ return [
         //    'password' => 'password',
         //    'state' => 'state',
         //],
+
+        /**
+         * Password chars
+         *
+         * These are the chars that are used when generating new passwords.
+         */
+        //'password_chars' => '0123456789abcdefghjkmnpqrstuvwxyzABCDEFGHJKLMNPQRSTUVWXYZ_-%^#!,<>.?{}[]+=()*',
     ],
 ];

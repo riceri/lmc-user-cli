@@ -3,6 +3,7 @@ namespace LmcUserCli\Command;
 
 use Laminas\Cli\Command\AbstractParamAwareCommand;
 use Laminas\Crypt\Password\Bcrypt;
+use Laminas\Math\Rand;
 use LmcUser\Entity\User;
 use LmcUser\Mapper\UserInterface;
 use LmcUser\Options\RegistrationOptionsInterface;
@@ -57,9 +58,7 @@ final class RegisterCommand extends AbstractParamAwareCommand
             $user->setState($this->userOptions->getDefaultUserState());
         }
 
-        $comb = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!#$%&=";
-        $shfl = str_shuffle($comb);
-        $newPassword = substr($shfl, 0, 12);
+        $newPassword = Rand::getString(12, $this->userOptions->getPasswordChars());
 
         $bcrypt = new Bcrypt();
         $bcrypt->setCost($this->userOptions->getPasswordCost());

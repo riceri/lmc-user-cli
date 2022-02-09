@@ -23,6 +23,11 @@ class ModuleOptions extends LmcModuleOptions implements
     ];
 
     /**
+     * @var string
+     */
+    protected $passwordChars = '0123456789abcdefghjkmnpqrstuvwxyzABCDEFGHJKLMNPQRSTUVWXYZ_-%^#!,<>.?{}[]+=()*';
+
+    /**
      * get database columns
      *
      * @return Array
@@ -58,10 +63,33 @@ class ModuleOptions extends LmcModuleOptions implements
      * set user table columns
      *
      * @param Array $tableColumns
+     * @return ModuleOptions
      */
     public function setTableColumns($tableColumns)
     {
         $this->tableColumns = $tableColumns;
+        return $this;
+    }
+
+    /**
+     * get chars to use in password generation
+     *
+     * @return string
+     */
+    public function getPasswordChars()
+    {
+        return $this->passwordChars;
+    }
+
+        /**
+     * set chars to use in password generation
+     *
+     * @param string $passwordChars
+     * @return ModuleOptions
+     */
+    public function setPasswordChars($passwordChars)
+    {
+        $this->passwordChars = $passwordChars;
         return $this;
     }
 }
