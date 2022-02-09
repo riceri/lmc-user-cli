@@ -1,0 +1,10 @@
+{
+    "description": "CLI based addon to LmcUser to allow for management of users from the console",
+    "type": "library",
+    "license": "BSD-3-Clause",
+    "require": {
+        "php": ">=7.4",
+        "lm-commons/lmc-user": "~3.5",
+        "laminas/laminas-cli": "~1.4"
+    }
+}
