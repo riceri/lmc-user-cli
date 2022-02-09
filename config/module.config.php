@@ -6,11 +6,7 @@ use LmcUserCli\Command\PasswordCommand;
 use LmcUserCli\Command\RegisterCommand;
 use LmcUserCli\Command\RemoveCommand;
 use LmcUserCli\Command\ShowCommand;
-use LmcUserCli\Command\Factory\ListCommandFactory;
-use LmcUserCli\Command\Factory\PasswordCommandFactory;
-use LmcUserCli\Command\Factory\RegisterCommandFactory;
-use LmcUserCli\Command\Factory\RemoveCommandFactory;
-use LmcUserCli\Command\Factory\ShowCommandFactory;
+use LmcUserCli\Command\Factory\CommandFactory;
 use LmcUserCli\Mapper\UserHydrator;
 use LmcUserCli\Mapper\UserMapper;
 use LmcUserCli\Mapper\Factory\UserHydratorFactory;
@@ -30,11 +26,11 @@ return [
     ],
     'service_manager' => [
         'factories' => [
-            ListCommand::class     => ListCommandFactory::class,
-            PasswordCommand::class => PasswordCommandFactory::class,
-            RegisterCommand::class => RegisterCommandFactory::class,
-            RemoveCommand::class   => RemoveCommandFactory::class,
-            ShowCommand::class     => ShowCommandFactory::class,
+            ListCommand::class     => CommandFactory::class,
+            PasswordCommand::class => CommandFactory::class,
+            RegisterCommand::class => CommandFactory::class,
+            RemoveCommand::class   => CommandFactory::class,
+            ShowCommand::class     => CommandFactory::class,
             ModuleOptions::class   => ModuleOptionsFactory::class,
             UserMapper::class      => UserMapperFactory::class,
             UserHydrator::class    => UserHydratorFactory::class,
