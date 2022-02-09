@@ -3,8 +3,10 @@ namespace LmcUserCli;
 
 use LmcUserCli\Command\ListCommand;
 use LmcUserCli\Command\PasswordCommand;
+use LmcUserCli\Command\RegisterCommand;
 use LmcUserCli\Command\Factory\ListCommandFactory;
 use LmcUserCli\Command\Factory\PasswordCommandFactory;
+use LmcUserCli\Command\Factory\RegisterCommandFactory;
 use LmcUserCli\Mapper\UserHydrator;
 use LmcUserCli\Mapper\UserMapper;
 use LmcUserCli\Mapper\Factory\UserHydratorFactory;
@@ -17,12 +19,14 @@ return [
         'commands' => [
             'user:list'     => ListCommand::class,
             'user:password' => PasswordCommand::class,
+            'user:register' => RegisterCommand::class,
         ],
     ],
     'service_manager' => [
         'factories' => [
             ListCommand::class     => ListCommandFactory::class,
             PasswordCommand::class => PasswordCommandFactory::class,
+            RegisterCommand::class => RegisterCommandFactory::class,
             ModuleOptions::class   => ModuleOptionsFactory::class,
             UserMapper::class      => UserMapperFactory::class,
             UserHydrator::class    => UserHydratorFactory::class,
