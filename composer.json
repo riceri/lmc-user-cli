@@ -5,6 +5,7 @@
     "require": {
         "php": ">=7.4",
         "lm-commons/lmc-user": "~3.5",
-        "laminas/laminas-cli": "~1.4"
+        "laminas/laminas-cli": "~1.4",
+        "laminas/laminas-math": "~3.5"
     }
 }
