@@ -8,4 +8,4 @@ Requirements
 
 * [LmcUser](https://github.com/LM-Commons/LmcUser)
 * [Laminas-Cli](https://docs.laminas.dev/laminas-cli/)
-
+* [Laminas-Math](https://docs.laminas.dev/laminas-math/)
