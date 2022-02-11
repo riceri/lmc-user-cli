@@ -1,5 +1,4 @@
 <?php
-
 namespace LmcUserCli\Mapper;
 
 use Laminas\Hydrator\HydratorInterface;
@@ -92,8 +91,6 @@ class UserHydrator implements HydratorInterface
             throw new InvalidArgumentException('$object must be an instance of LmcUser\Entity\UserInterface');
         }
 
-        $columns = $this->userOptions->getTableColumns();
-
         $data = $this->mapField('user_id', 'id', $data);
 
         return $this->hydrator->hydrate($data, $object);
@@ -107,6 +104,9 @@ class UserHydrator implements HydratorInterface
      */
     protected function mapField($keyFrom, $keyTo, array $array)
     {
+        if ($keyFrom === $keyTo) {
+            return $array;
+        }
         $array[$keyTo] = $array[$keyFrom];
         unset($array[$keyFrom]);
 
