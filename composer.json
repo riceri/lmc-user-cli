@@ -1,5 +1,6 @@
 {
-    "description": "CLI based addon to LmcUser to allow for management of users from the console",
+    "name": "riceri/lmc-user-cli",
+    "description": "CLI based addon to LmcUser, to allow for management of users from the console",
     "type": "library",
     "license": "BSD-3-Clause",
     "require": {
