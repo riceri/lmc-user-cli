@@ -8,5 +8,10 @@
         "lm-commons/lmc-user": "~3.5",
         "laminas/laminas-cli": "~1.4",
         "laminas/laminas-math": "~3.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "LmcUserCli\\": "src/"
+        }
     }
 }
